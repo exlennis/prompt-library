@@ -1,6 +1,6 @@
-# prompt-library
+# Prompt Library
 
-Welcome to my collection of prompts for various AI tasks!
+Welcome to my collection of prompts for various tasks!
 
 - Goal: Create a repository that stores reusable prompt templates.
 - Content: Each prompt should include a title, category, detailed instructions, roles (e.g., system, user), tone/style guidelines, example usage, and any metadata (such as creation date or tags).
