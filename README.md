@@ -41,6 +41,7 @@ Happy prompting!
 
 ## Library Structure (TBC)
 
+```markdown
 prompt-library/
 ├── README.md
 ├── prompts/
@@ -61,6 +62,7 @@ prompt-library/
       ├── library_structure.md
       ├── prompt_categories.md
       └── metadata.json
+```
 
 - README.md: a clear README that explains what your prompt library is, how to use it, and how others can contribute. Include instructions on how to run any automation scripts.
 - prompts/ folder: Prompts by organised by category (e.g., general, coding, writing).
