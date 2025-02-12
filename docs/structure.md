@@ -1,3 +1,4 @@
+```markdown
 /prompt-library
 │── README.md                 # Main repository overview, explains how to use the prompt library, and how others can contribute. Include instructions on how to run any automation scripts.
 │── prompts/                   # Collection of curated prompt organised by category
@@ -31,3 +32,4 @@
 │   ├── LICENSE         # Repository license information
 │
 └── .gitignore           # Specifies ignored files/directories (consider adding /working/)
+```
