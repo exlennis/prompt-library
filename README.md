@@ -36,6 +36,7 @@ If you have a great prompt, feel free to:
 - Submit a Pull Request with a new prompt in the appropriate category.
 
 Happy prompting!
+<<<<<<< Updated upstream
 
 ---
 
@@ -70,3 +71,5 @@ prompt-library/
 - scripts/ folder (phase-2): Add automation scripts to process or update prompts.
 - data/ folder (phase-2):  Store any JSON or CSV files if you plan to aggregate metadata or stats.
 - GitHub Pages (phase-2): Build a web interface for the library, can use GitHub Pages to serve the Markdown files as a website. test out Tools like Jekyll or MkDocs can turn Markdown into a static site.
+=======
+>>>>>>> Stashed changes
