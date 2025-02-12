@@ -7,25 +7,64 @@ Welcome to my collection of prompts for various AI tasks!
 - Linking: Some prompts might reference or build on others. You might want to include links (or “see also” sections) so users can navigate between related templates.
 - Automation: Later you can add simple scripts (e.g., Python with the OpenAI API) to help parse or update metadata automatically.
 
-**Categories:**
+## **Categories:**
 
-- [AI Writing](/categories/ai-writing/)
+- [Writing](/categories/ai-writing/)
 - [Coding](/categories/coding/)
 - [General](/categories/general/)
-- ... (list all your categories with links)
+- ... (list all your categories with links) to be updated
 
-**How to Use:**
+## **How to Use:**
 
-1.  Browse the [categories](/categories/) folder.
+1.  Browse the [Prompts](/prompts/) folder.
 2.  Find prompts that are relevant to you.
 3.  Copy the "Prompt" section and paste it into your AI tool of choice.
-4.  Customize the placeholders (like `[Topic]`) as needed.
+4.  Customise the placeholders (like `[Topic]`) as needed.
 
-**Contributing:**
 
-(Optional: If you want others to contribute)
-I welcome contributions!  If you have a great prompt, feel free to:
+---
+
+
+## **Userful links**
+- Add other prompt libaries and prompt engineering tools.
+
+
+## **Contributing:**
+
+If you have a great prompt, feel free to:
 - Open an Issue to suggest a new prompt.
 - Submit a Pull Request with a new prompt in the appropriate category.
 
- 
+Happy prompting!
+
+---
+
+## Library Structure (TBC)
+
+prompt-library/
+├── README.md
+├── prompts/
+│   ├── general/
+│   │   ├── prompt_name1.md
+│   │   └── ...
+│   ├── coding/
+│   │   ├── prompt_name2.md
+│   │   └── ...
+│   └── writing/
+│       ├── prompt_name3.md
+│       └── ...
+├── templates/
+│    └── prompt_template.md
+├── scripts/
+│    └── parse_prompts.py
+└── data/
+      ├── library_structure.md
+      ├── prompt_categories.md
+      └── metadata.json
+
+- README.md: a clear README that explains what your prompt library is, how to use it, and how others can contribute. Include instructions on how to run any automation scripts.
+- prompts/ folder: Prompts by organised by category (e.g., general, coding, writing).
+- templates/ folder: Base prompt template that includes YAML front matter for metadata.
+- scripts/ folder (phase-2): Add automation scripts to process or update prompts.
+- data/ folder (phase-2):  Store any JSON or CSV files if you plan to aggregate metadata or stats.
+- GitHub Pages (phase-2): Build a web interface for the library, can use GitHub Pages to serve the Markdown files as a website. test out Tools like Jekyll or MkDocs can turn Markdown into a static site.
