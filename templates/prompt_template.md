@@ -1,25 +1,32 @@
 ---
-title: "[Title]"                          # [Required] Clear, descriptive title indicating purpose, Use a verb-first naming approach
+title: "[Title]"                          # [Required] Clear, descriptive title indicating purpose, use a verb-first naming approach
 description: "[Brief one-liner]"          # [Required] Core task purpose summary: 10 - 20 words 
-version: "[1.0]"                          # [Required] Semantic version (major.minor)
-last_updated: "[YYYY-MM-DD]"              # [Required] ISO 8601 date
+version: "1.0"                            # [Required] Semantic version (major.minor) - No brackets needed
+last_updated: "YYYY-MM-DD"                # [Required] ISO 8601 date format
 category: "[Main Category]"               # [Required] Primary classification
 sub_category: "[Sub-Category]"            # [Optional] Secondary classification
+
 keywords:                                 # [Optional] Suggest up to 5 search terms
   - "[Keyword 1]"
   - "[Keyword 2]"
-source:                                   # [Optional] User Provided Citation/origin reference
-  - "[URL or reference]"                  # (e.g., `[Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library)`)
-models:                                   # [Required] Default to `General` or User Specified
-  - "[General]"                           # (Default to `General`)  
-  - "[Model 1]" , "[Model 2]"             # (User Specified AI model(s) e.g., `ChatGPT-4o`, `Gemini 2Pro`)
-recommended_ability: "[e.g., Reasoning]"  # [Optional] User Suggested ability focus
-recommended_presets:                      # [Optional] User Suggested configuration tips & settings
-  ability: "[e.g., reasoning]"            # (e.g., `analysis`, `creativity`)
-  creativity: "[e.g., Creativity=2/5]"    # (0=strict, 5=unrestrained)
-variables:                                # [Optional] Dynamic variables for prompt reuse
-  - "{{VARIABLE_NAME}}"                   # Variables are enclosed in double brackets e.g., `{{PRODUCT_DESCRIPTION}}` or `{{KEYWORDS}}`
 
+source:                                   # [Optional] User Provided Citation/origin reference
+  - "[URL or reference]"                  # Example: "[Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library)"
+
+models:                                   # [Required] Default to "General" or User-Specified AI models
+  - "General"                             # (Default to `General`)
+  - "[Model 1]"                           # Example: "ChatGPT-4o"
+  - "[Model 2]"                           # Example: "Gemini 2Pro"
+
+recommended_ability: "[e.g., Reasoning]"  # [Optional] User-suggested ability focus
+
+recommended_presets:                      # [Optional] User-suggested configuration tips & settings
+  ability: "Reasoning"                    # Example: "analysis", "creativity"
+  creativity: "2/5"                       # Example: Creativity Level (0 = strict, 5 = unrestrained)
+
+variables:                                # [Optional] Dynamic variables for prompt reuse
+  - "{{VARIABLE_NAME}}"                   # Example: "{{PRODUCT_DESCRIPTION}}" or "{{KEYWORDS}}"
+  - "{{ANOTHER_VARIABLE}}"
 ---
 
 # **[Title]**
