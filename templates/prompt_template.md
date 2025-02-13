@@ -1,8 +1,8 @@
 ---
 title: "[Title]"                          # [Required] Clear, descriptive title indicating purpose, Use a verb-first naming approach
 description: "[Brief one-liner]"          # [Required] Core task purpose summary: 10 - 20 words 
-version: "1.0"                            # [Required] Semantic version (major.minor)
-last_updated: "YYYY-MM-DD"                # [Required] ISO 8601 date
+version: "[1.0]"                          # [Required] Semantic version (major.minor)
+last_updated: "[YYYY-MM-DD]"              # [Required] ISO 8601 date
 category: "[Main Category]"               # [Required] Primary classification
 sub_category: "[Sub-Category]"            # [Optional] Secondary classification
 keywords:                                 # [Optional] Suggest up to 5 search terms
@@ -17,7 +17,8 @@ recommended_presets:                      # [Specified] User Suggested configura
   ability: "[e.g., reasoning]"            # (e.g., `analysis`, `creativity`)
   creativity: "[e.g., Creativity=2/5]"    # (0=strict, 5=unrestrained)
 variables:                                # [Conditional] Dynamic variables for prompt reuse
-  - "[[VARIABLE_NAME]]"                   # Variables are enclosed in double brackets e.g., `[[PRODUCT_DESCRIPTION]]` or `[[KEYWORDS]]`
+  - "{{VARIABLE_NAME}}"                   # Variables are enclosed in double brackets e.g., `{{PRODUCT_DESCRIPTION}}` or `{{KEYWORDS}}`
+ 
 ---
 
 # **[Title]**
@@ -38,12 +39,12 @@ variables:                                # [Conditional] Dynamic variables for 
 
 ## Structured Prompt
 
-[The full prompt text goes here. Include formatting rules, tone, constraints, and clearly mark dynamic placeholders using double brackets (e.g., `[[VARIABLE_Name]]`).]
+[The full prompt text goes here. Include formatting rules, tone, constraints, and clearly mark dynamic placeholders using double brackets (e.g., `{{VARIABLE_Name}}`).]
 
 ### Example Inputs *(Only include when required by Structured Prompt)*
 
-- **[[VARIABLE_1]]:** Explanation or input example (if applicable)
-- **[[VARIABLE 2]]:** Explanation or input example (if applicable)
+- **{{VARIABLE_1}}:** Explanation or input example (if applicable)
+- **{{VARIABLE 2}}:** Explanation or input example (if applicable)
 
 ---
 
