@@ -17,7 +17,7 @@ recommended_presets:                      # [Specified] User Suggested configura
   ability: "[e.g., reasoning]"            # (e.g., `analysis`, `creativity`)
   creativity: "[e.g., Creativity=2/5]"    # (0=strict, 5=unrestrained)
 variables:                                # [Conditional] Dynamic variables for prompt reuse
-  - "{{VARIABLE_NAME}}"                   # Variables are enclosed in double brackets e.g., `{{PRODUCT_DESCRIPTION}}` or `{{KEYWORDS}}`
+  - "[[VARIABLE_NAME]]"                   # Variables are enclosed in double brackets e.g., `[[PRODUCT_DESCRIPTION]]` or `[[KEYWORDS]]`
 ---
 
 # **[Title]**
@@ -38,12 +38,12 @@ variables:                                # [Conditional] Dynamic variables for 
 
 ## Structured Prompt
 
-[The full prompt text goes here. Include formatting rules, tone, constraints, and clearly mark dynamic placeholders using double brackets (e.g., `{{VARIABLE_Name}}`).]
+[The full prompt text goes here. Include formatting rules, tone, constraints, and clearly mark dynamic placeholders using double brackets (e.g., `[[VARIABLE_Name]]`).]
 
 ### Example Inputs *(Only include when required by Structured Prompt)*
 
-- **{{VARIABLE_1}}:** Explanation or input example (if applicable)
-- **{{VARIABLE 2}}:** Explanation or input example (if applicable)
+- **[[VARIABLE_1]]:** Explanation or input example (if applicable)
+- **[[VARIABLE 2]]:** Explanation or input example (if applicable)
 
 ---
 
