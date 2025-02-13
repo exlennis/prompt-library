@@ -11,7 +11,7 @@ keywords:                                 # [Optional] Suggest up to 5 search te
 source: "[URL or reference]"              # [Specified] User Proivded Citation/origin reference
 models:                                   # [Required] Default to `General` or User Specified
   - "[General]"                           # (Default to `General`) or
-  - "[Model 1]","[Model 2]"               # (User Specified AI model(s) e.g., `ChatGPT-4o`, `Gemini 2Pro`)
+  - "[Model 1]" , "[Model 2]"             # (User Specified AI model(s) e.g., `ChatGPT-4o`, `Gemini 2Pro`)
 recommended_ability: "[e.g., Reasoning]"  # [Specified] User Suggested ability focus
 recommended_presets:                      # [Specified] User Suggested configuration tips & settings
   ability: "[e.g., reasoning]"            # (e.g., `analysis`, `creativity`)
