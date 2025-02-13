@@ -8,7 +8,8 @@ sub_category: "[Sub-Category]"            # [Optional] Secondary classification
 keywords:                                 # [Optional] Suggest up to 5 search terms
   - "[Keyword 1]"
   - "[Keyword 2]"
-source: "[URL or reference]"              # [Specified] User Proivded Citation/origin reference
+source:                                   # [Specified] User Provided Citation/origin reference
+  - "[URL or reference]"
 models:                                   # [Required] Default to `General` or User Specified
   - "[General]"                           # (Default to `General`) or
   - "[Model 1]" , "[Model 2]"             # (User Specified AI model(s) e.g., `ChatGPT-4o`, `Gemini 2Pro`)
@@ -18,7 +19,7 @@ recommended_presets:                      # [Specified] User Suggested configura
   creativity: "[e.g., Creativity=2/5]"    # (0=strict, 5=unrestrained)
 variables:                                # [Conditional] Dynamic variables for prompt reuse
   - "{{VARIABLE_NAME}}"                   # Variables are enclosed in double brackets e.g., `{{PRODUCT_DESCRIPTION}}` or `{{KEYWORDS}}`
-
+ 
 ---
 
 # **[Title]**
@@ -28,10 +29,10 @@ variables:                                # [Conditional] Dynamic variables for 
 ### Metadata
 
 - **Version:** `v1.0` - **Last Updated:** `YYYY-MM-DD`
-- **Categories:** `[Main Category]` - `[Sub-Category]` 
+- **Categories:** `[Main Category]` - `[Sub-Category]`
 - **Keywords:** `[Keyword 1], [Keyword 2]` *(Up to 5)*
 - **Source:** `[URL or reference]` *(User Specified)*
-- **Models:** `[General]` or `[Model 1], [Model 2]` *(Default to General or User Spcified)*
+- **Models:** `[General]` or `[Model 1], [Model 2]` *(Default to General or User Specified)*
 - **Recommended Ability:** `[e.g., Reasoning]` *(User Specified)*
 - **Recommended Presets:** `[e.g., Creativity Level 3/5]` *(User Specified)*
 
