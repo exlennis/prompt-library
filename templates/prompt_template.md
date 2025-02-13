@@ -11,7 +11,7 @@ keywords:                                 # [Optional] Suggest up to 5 search te
 source:                                   # [Optional] User Provided Citation/origin reference
   - "[URL or reference]"                  # (e.g., `[Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library)`)
 models:                                   # [Required] Default to `General` or User Specified
-  - "[General]"                           # (Default to `General`) or  
+  - "[General]"                           # (Default to `General`)  
   - "[Model 1]" , "[Model 2]"             # (User Specified AI model(s) e.g., `ChatGPT-4o`, `Gemini 2Pro`)
 recommended_ability: "[e.g., Reasoning]"  # [Optional] User Suggested ability focus
 recommended_presets:                      # [Optional] User Suggested configuration tips & settings
