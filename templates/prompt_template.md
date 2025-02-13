@@ -8,16 +8,16 @@ sub_category: "[Sub-Category]"            # [Optional] Secondary classification
 keywords:                                 # [Optional] Suggest up to 5 search terms
   - "[Keyword 1]"
   - "[Keyword 2]"
-source:                                   # [Specified] User Provided Citation/origin reference
-  - "[URL or reference]"
+source:                                   # [Optional] User Provided Citation/origin reference
+  - "[URL or reference]"                  # (e.g., `[Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library)`)
 models:                                   # [Required] Default to `General` or User Specified
-  - "[General]"                           # (Default to `General`) or
+  - "[General]"                           # (Default to `General`) or  
   - "[Model 1]" , "[Model 2]"             # (User Specified AI model(s) e.g., `ChatGPT-4o`, `Gemini 2Pro`)
-recommended_ability: "[e.g., Reasoning]"  # [Specified] User Suggested ability focus
-recommended_presets:                      # [Specified] User Suggested configuration tips & settings
+recommended_ability: "[e.g., Reasoning]"  # [Optional] User Suggested ability focus
+recommended_presets:                      # [Optional] User Suggested configuration tips & settings
   ability: "[e.g., reasoning]"            # (e.g., `analysis`, `creativity`)
   creativity: "[e.g., Creativity=2/5]"    # (0=strict, 5=unrestrained)
-variables:                                # [Conditional] Dynamic variables for prompt reuse
+variables:                                # [Optional] Dynamic variables for prompt reuse
   - "{{VARIABLE_NAME}}"                   # Variables are enclosed in double brackets e.g., `{{PRODUCT_DESCRIPTION}}` or `{{KEYWORDS}}`
 
 ---
