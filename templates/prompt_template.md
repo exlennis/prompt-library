@@ -19,7 +19,7 @@ recommended_presets:                      # [Specified] User Suggested configura
   creativity: "[e.g., Creativity=2/5]"    # (0=strict, 5=unrestrained)
 variables:                                # [Conditional] Dynamic variables for prompt reuse
   - "{{VARIABLE_NAME}}"                   # Variables are enclosed in double brackets e.g., `{{PRODUCT_DESCRIPTION}}` or `{{KEYWORDS}}`
- 
+
 ---
 
 # **[Title]**
