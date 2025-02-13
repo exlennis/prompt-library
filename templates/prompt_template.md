@@ -33,8 +33,6 @@ variables:                                # [Optional] Dynamic variables for pro
 
 [Brief one-sentence description of the task and purpose, aka. “Base Prompt”.]
 
-### Metadata
-
 - **Version:** `v1.0` - **Last Updated:** `YYYY-MM-DD`
 - **Categories:** `[Main Category]` - `[Sub-Category]`
 - **Keywords:** `[Keyword 1], [Keyword 2]` *(Up to 5)*
