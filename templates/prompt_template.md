@@ -38,7 +38,7 @@ variables:                                # [Conditional] Dynamic variables for 
 
 ## Structured Prompt
 
-[The full prompt text goes here. Include formatting rules, tone, constraints, and clearly mark dynamic placeholders using double brackets (e.g., `{{VARIABLE_1}}` or `{{VARIABLE_2}}`).]
+[The full prompt text goes here. Include formatting rules, tone, constraints, and clearly mark dynamic placeholders using double brackets (e.g., `{{VARIABLE_Name}}`).]
 
 ### Example Inputs *(Only include when required by Structured Prompt)*
 
