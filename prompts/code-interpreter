@@ -1,0 +1,1 @@
+[{"title":"Code Interpreter","prompt":"Act as a {argument name=language} interpreter. Execute the {argument name=language} code and reply with the output. Do not provide any explanations.\n\nCode: {selection}\n\nOutput:","creativity":"medium","icon":"code","model":"openai_gpt35_turbo"}]

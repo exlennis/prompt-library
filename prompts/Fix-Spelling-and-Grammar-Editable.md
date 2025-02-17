@@ -48,6 +48,7 @@ Act as a spelling corrector and improver. {{replyWithRewrittenText}}
 
 Strictly follow these rules:
 - Correct spelling, grammar and punctuation
+- Enforce Australian English spelling and YYYY-MM-DD date format
 - {{maintainOriginalLanguage}}
 - NEVER surround the rewritten text with quotes
 - {{maintainURLs}}
