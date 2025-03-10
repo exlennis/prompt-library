@@ -1,4 +1,19 @@
-# Claude prompting guide: Normal Mode
+# Claude prompting guide: All Models
+
+The prompt engineering pages in this section have been organized from most broadly effective techniques to more specialized techniques. When troubleshooting performance, we suggest you try these techniques in order, although the actual impact of each technique will depend on your use case.
+
+
+1. Be clear and direct
+2. Use examples (multishot)
+3. Let Claude think (chain of thought)
+4. Use XML tags
+5. Give Claude a role (system prompts)
+6. Prefill Claude’s response
+7. Chain complex prompts
+8. Long context tips
+
+
+
 
 ## General tips for effective prompting
 
@@ -19,7 +34,7 @@ Good prompt:
 
 Why it's better: The good prompt provides specific details about the task, including the number of slides, the purpose of the presentation, and the key topics to be covered.
 
-### 2. Use examples
+### 2. Use examples (multishot)
 - Provide examples of the kind of output you're looking for.
 - If you want a specific format or style, show Claude an example.
 
@@ -43,7 +58,7 @@ Help me draft a new email following a similar tone and structure, but for our cu
 
 Why it's better: The good prompt provides a concrete example of the desired style and tone, giving Claude a clear reference point for the new email.
 
-### 3. Encourage thinking
+### 3. Encourage thinking (chain of thought)
 - For complex tasks, ask Claude to "think step-by-step" or "explain your reasoning."
 - This can lead to more accurate and detailed responses.
 
@@ -106,8 +121,9 @@ This information will help me shape our marketing approach."
 
 Why it's better: The good prompt asks for specific, contextually relevant  information that leverages Claude's broad knowledge base. It provides context for how the information will be used, which helps Claude frame its answer in the most relevant way.
 
-### 6. Use role-playing
+### 6. Use role-playing (system prompts)
 - Ask Claude to adopt a specific role or perspective when responding.
+
 
 Bad prompt:
 <prompt>
@@ -125,6 +141,10 @@ Then, switch roles and provide advice on how I, as the buyer, can best approach 
 </prompt>
 
 Why it's better: This prompt uses role-playing to explore multiple perspectives of the negotiation, providing a more comprehensive preparation. Role-playing also encourages Claude to more readily adopt the nuances of specific perspectives, increasing the intelligence and performance of Claude’s response.
+
+
+### 7. Use XML tags
+
 
 
 ## Task-specific tips and examples
@@ -152,8 +172,8 @@ Please provide an outline for a 1000-word blog post that covers the top 5 cybers
 Why it's better: The good prompt specifies the audience, desired tone, and key characteristics of the content, giving Claude clear guidelines for creating appropriate and effective output.
 
 2. **Define the tone and style**
-- Describe the desired tone.
-- If you have a style guide, mention key points from it.
+  - Describe the desired tone.
+  - If you have a style guide, mention key points from it.
 
 Bad prompt:
 <prompt>
@@ -198,9 +218,9 @@ Why it's better: This prompt provides a clear structure and asks for specific el
 ### Document summary and Q&A
 
 1. **Be specific about what you want**
-- Ask for a summary of specific aspects or sections of the document.
-- Frame your questions clearly and directly.
-- Be sure to specify what kind of summary (output structure, content type) you want
+  - Ask for a summary of specific aspects or sections of the document.
+  - Frame your questions clearly and directly.
+  - Be sure to specify what kind of summary (output structure, content type) you want
 
 2. **Use the document names**
 - Refer to attached documents by name.
@@ -274,10 +294,10 @@ Good prompt:
 1. Suggesting 10 virtual team-building activities that promote collaboration
 2. For each activity, briefly explain how it fosters teamwork
 3. Indicate which activities are best for:
-a) Ice-breakers
-b) Improving communication
-c) Problem-solving skills
-4. Suggest one low-cost option and one premium option."
+  a) Ice-breakers
+  b) Improving communication
+  c) Problem-solving skills
+  4. Suggest one low-cost option and one premium option."
 </prompt>
 
 Why it's better: This prompt provides specific parameters for the brainstorming session, including the number of ideas, type of activities, and additional categorisation, resulting in a more structured and useful output.
@@ -305,13 +325,13 @@ Why it's better: This prompt requests a specific structure (table) for the compa
 ## Troubleshooting, minimising hallucinations, and maximising performance
 
 1. **Allow Claude to acknowledge uncertainty**
-- Tell Claude that it should say it doesn’t know if it doesn’t know. Ex. “If you're unsure about something, it's okay to admit it. Just say you don’t know.”
+  - Tell Claude that it should say it doesn’t know if it doesn’t know. Ex. “If you're unsure about something, it's okay to admit it. Just say you don’t know.”
 
-2. **Break down complex tasks**
-- If a task seems too large and Claude is missing steps or not performing certain steps well, break it into smaller steps and work through them with Claude one message at a time.
+2. **Break down complex tasks** 
+  - If a task seems too large and Claude is missing steps or not performing certain steps   well, break it into smaller steps and work through them with Claude one message at a time.
 
 3. **Include all contextual information for new requests**
-- Claude doesn't retain information from previous conversations, so include all necessary context in each new conversation.
+  - Claude doesn't retain information from previous conversations, so include all necessary context in each new conversation.
 
 ## Example good vs. bad prompt examples
 
@@ -410,3 +430,71 @@ Finally, summarise this entire analysis into a single paragraph that I can use a
 </prompt>
 
 Why it's better: This prompt combines role-playing (as CFO), structured output, specific data analysis requests, predictive analysis, risk assessment, comparative analysis, and even anticipates follow-up questions. It provides a clear framework while encouraging deep analysis and strategic thinking.
+
+
+### Example 3: Financial report analysis
+
+Bad prompt:
+<prompt>
+From the following list of Wikipedia article titles, identify which article this sentence came from.
+Respond with just the article title and nothing else.
+
+Article titles:
+{{titles}}
+
+Sentence to classify:
+{{sentence}}
+</prompt>
+
+
+Good prompt:
+<prompt>
+You are an intelligent text classification system specialized in matching sentences to Wikipedia article titles. Your task is to identify which Wikipedia article a given sentence most likely belongs to, based on a provided list of article titles.
+
+First, review the following list of Wikipedia article titles:
+<article_titles>
+{{titles}}
+</article_titles>
+
+Now, consider this sentence that needs to be classified:
+<sentence_to_classify>
+{{sentence}}
+</sentence_to_classify>
+
+Your goal is to determine which article title from the provided list best matches the given sentence. Follow these steps:
+
+1. List the key concepts from the sentence
+2. Compare each key concept with the article titles
+3. Rank the top 3 most relevant titles and explain why they are relevant
+4. Select the most appropriate article title that best encompasses or relates to the sentence's content
+
+Wrap your analysis in <analysis> tags. Include the following:
+- List of key concepts from the sentence
+- Comparison of each key concept with the article titles
+- Ranking of top 3 most relevant titles with explanations
+- Your final choice and reasoning
+
+After your analysis, provide your final answer: the single most appropriate Wikipedia article title from the list.
+
+Output only the chosen article title, without any additional text or explanation.
+</prompt>
+
+Why it's better: 
+- Adds clear step-by-step reasoning instructions
+- Uses XML tags to organize content
+- Provides explicit output formatting requirements
+- Guides Claude through the analysis process
+
+
+---
+
+### Resources:
+1. [Prompt generator](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-generator)
+2. [Be clear and direct](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct)
+3. [Use examples (multishot)](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/multishot-prompting)
+4. [Let Claude think (chain of thought)](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought)
+5. [Use XML tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags)
+6. [Give Claude a role (system prompts)](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts)
+7. [Prefill Claude’s response](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
+8. [Chain complex prompts](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts)
+9. [Long context tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips)
