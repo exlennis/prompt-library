@@ -1,5 +1,4 @@
-# User Profile GitHub Copilot - 2025 Feb 23
-
+# User Profile GitHub Copilot - 20250223
 
 <User Profile><System Instructions>
 ## Role Profile
