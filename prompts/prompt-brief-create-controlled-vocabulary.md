@@ -3,7 +3,7 @@
 <brief>
 ### Purpose
 
-Create a comprehensive list of standardised terminology for consistent folder naming throughout the FOMO system. This controlled vocabulary will ensure uniform metadata application, improve searchability, and provide clear guidance for both manual and automated file organisation.
+Create a comprehensive list of standardised terminology for consistent folder naming throughout the FOMO framework. This controlled vocabulary is a foundational document that serves the entire system while remaining practical and usable. It will ensure uniform metadata application, improve searchability, and provide clear guidance for both manual and automated file organisation.
 
 ### Document Structure
 
@@ -99,14 +99,16 @@ Create a comprehensive controlled vocabulary list that standardises terminology 
    - Support design project terminology (briefs, mockups, assets)
    - Support development terminology (src, components, utils)
    - Include terms for temporal organisation (archive, current, upcoming)
+   - Consider pro and cons of abbreviations 
 
 ## Key Integration Points
 The controlled vocabulary must integrate seamlessly with:
-- The kebab-case naming convention specified in naming-STANDARDS-v02.md
+- The naming convention specified in naming-STANDARDS-v02.md
 - The directory structure outlined in directory-structure-GUIDELINES-v02.md
 - The principles outlined in the project-charter-v01.md
 - The implementation approach in implementation-plan-v01.md
+- The industry insights and best practices provided in the three research documents
 
-Please create a comprehensive, well-organised Controlled-Vocabulary-v01.md document that will serve as the standardised terminology reference for the entire FOMO system.
+Please create a comprehensive, well-organised Controlled-Vocabulary-v01.md document that will serve as a starting point in standardising FOMO's terminology reference.
 ```
 </propmt>
