@@ -1,4 +1,4 @@
-# Prompt Template: Two-Phased Document Analysis and Revision
+# Prompt Template: Two-Step Document Review: Analysis and Revision
 
 <prompt>
 ```
